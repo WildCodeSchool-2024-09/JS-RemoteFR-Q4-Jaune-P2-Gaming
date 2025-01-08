@@ -11,11 +11,10 @@ import App from "./App";
 // Import additional components for new routes
 // Try creating these components in the "pages" folder
 
+import Calendrier from "./pages/Calendrier/Calendrier";
 import Catalogue from "./pages/Catalogue/Catalogue";
-import GameDetails from "./pages/GameDetails/GameDetails";
 import HomePage from "./pages/HomePage/HomePage";
 import NewGames from "./pages/NewGames/NewGames";
-import Quizz from "./pages/Quizz/Quizz";
 import Results from "./pages/Results/Results";
 
 // import About from "./pages/About";
@@ -38,10 +37,6 @@ const router = createBrowserRouter([
         element: <NewGames />,
       },
       {
-        path: "/GameDetails",
-        element: <GameDetails />,
-      },
-      {
         path: "/Results",
         element: <Results />,
       },
@@ -50,8 +45,8 @@ const router = createBrowserRouter([
         element: <Catalogue />,
       },
       {
-        path: "/Quizz",
-        element: <Quizz />,
+        path: "/Calendrier",
+        element: <Calendrier />,
       },
     ],
   },
