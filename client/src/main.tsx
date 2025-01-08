@@ -10,7 +10,7 @@ import App from "./App";
 
 // Import additional components for new routes
 // Try creating these components in the "pages" folder
-import NavBar from "./components/NavBar/Navbar";
+
 import Catalogue from "./pages/Catalogue/Catalogue";
 import GameDetails from "./pages/GameDetails/GameDetails";
 import HomePage from "./pages/HomePage/HomePage";
@@ -27,15 +27,10 @@ import Results from "./pages/Results/Results";
 // You can add more routes as you build out your app!
 const router = createBrowserRouter([
   {
-    path: "/App", // The root path
     element: <App />,
     children: [
       {
-        path: "/NavBar",
-        element: <NavBar />,
-      },
-      {
-        path: "/HomePage",
+        path: "/",
         element: <HomePage />,
       },
       {
