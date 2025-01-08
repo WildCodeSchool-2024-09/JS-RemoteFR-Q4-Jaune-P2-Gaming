@@ -10,7 +10,7 @@ import App from "./App";
 
 // Import additional components for new routes
 // Try creating these components in the "pages" folder
-import NavBar from "./components/Navbar/NavBar";
+import NavBar from "./components/NavBar/Navbar";
 import Catalogue from "./pages/Catalogue/Catalogue";
 import GameDetails from "./pages/GameDetails/GameDetails";
 import HomePage from "./pages/HomePage/HomePage";
