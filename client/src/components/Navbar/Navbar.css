@@ -1,0 +1,17 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.logos_reseaux {
+  display: flex;
+  flex-direction: column;
+  width: 3rem;
+  margin-top: 45rem;
+}
