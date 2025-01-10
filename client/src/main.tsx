@@ -11,6 +11,7 @@ import App from "./App";
 // Import additional components for new routes
 // Try creating these components in the "pages" folder
 
+import Calendrier from "./pages/Calendrier/Calendrier";
 import Catalogue from "./pages/Catalogue/Catalogue";
 import GameDetails from "./pages/GameDetails/GameDetails";
 import HomePage from "./pages/HomePage/HomePage";
@@ -48,6 +49,10 @@ const router = createBrowserRouter([
       {
         path: "/Catalogue",
         element: <Catalogue />,
+      },
+      {
+        path: "/Calendrier",
+        element: <Calendrier />,
       },
       {
         path: "/Quizz",
