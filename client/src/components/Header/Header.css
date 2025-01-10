@@ -12,6 +12,7 @@ header {
   display: flex;
   align-items: center;
   height: 5rem;
+  padding: 1rem;
 }
 
 img {
@@ -21,7 +22,8 @@ input {
   background-color: #1b2589;
   color: white;
   border: none;
-  padding: 1rem 5rem;
+  padding: 0.5rem 5rem;
+  border-radius: 30px;
 }
 
 h1 {
@@ -31,4 +33,16 @@ h1 {
   color: #ffffff;
   opacity: 0.93;
   margin-right: 10rem;
+}
+
+@media screen and (max-width: 1200px) {
+  img {
+    margin-left: 5rem;
+  }
+  input {
+    display: none;
+  }
+  button {
+    display: none;
+  }
 }

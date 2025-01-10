@@ -8,8 +8,11 @@ function App() {
   return (
     <>
       <Header />
-      <NavBar />
-      <Outlet />
+
+      <main className="outlet">
+        <NavBar />
+        <Outlet />
+      </main>
     </>
   );
 }
