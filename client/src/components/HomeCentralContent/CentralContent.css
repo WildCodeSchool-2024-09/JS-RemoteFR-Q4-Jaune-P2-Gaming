@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.centralContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.containerTop {
+  max-width: 50vw;
+  max-height: 45vw;
+  border-radius: 3%;
+  color: red;
+  background-color: rgba(0, 0, 0, 0.5);
+  box-shadow: 2px 2px 20px 2px red;
+}
+
+.containerImg {
+  display: flex;
+  justify-content: center;
+}
+
+.centralImg {
+  max-width: 45vw;
+  padding-top: 1rem;
+}
+
+.containerInfo {
+  max-height: 15vw;
+  background-color: rgb(52, 50, 50);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border-radius: 3%;
+}
+
+.platforms {
+  color: white;
+  font-size: 1.5vw;
+  margin-left: 1vw;
+  font-weight: bold;
+}
+
+.infoPlatforms {
+  color: white;
+  margin-left: 1vw;
+}
+
+.centralName {
+  font-size: 1.5vw;
+  color: white;
+  margin-left: 1vw;
+}
+
+.containerRate {
+  max-width: 10vw;
+  margin-top: 0.5rem;
+  margin-left: 0.5rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  background-color: rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 12px 5px rgb(0, 0, 0);
+}
+
+.pRate,
+.apiRate {
+  color: white;
+}
+
+.pRate {
+  font-size: 1vw;
+}
+
+.apiRate {
+  font-size: 1vw;
+}

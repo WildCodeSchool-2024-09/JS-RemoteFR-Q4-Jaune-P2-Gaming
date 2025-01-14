@@ -1,25 +1,28 @@
 // Import necessary modules from React and React Router
-import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
 /* ************************************************************************* */
 
 // Import the main app component
-import App from "./App";
+import App from "./App.tsx";
 
 // Import additional components for new routes
 // Try creating these components in the "pages" folder
 
-import Catalogue from "./pages/Catalogue/Catalogue";
-import GameDetails from "./pages/GameDetails/GameDetails";
-import HomePage from "./pages/HomePage/HomePage";
-import NewGames from "./pages/NewGames/NewGames";
-import Quizz from "./pages/Quizz/Quizz";
-import Results from "./pages/Results/Results";
+import Catalogue from "./pages/Catalogue/Catalogue.tsx";
+import GameDetails from "./pages/GameDetails/GameDetails.tsx";
+import HomePage from "./pages/HomePage/HomePage.tsx";
+import NewGames from "./pages/NewGames/NewGames.tsx";
+import Quizz from "./pages/Quizz/Quizz.tsx";
+import Results from "./pages/Results/Results.tsx";
 
 // import About from "./pages/About";
 // import Contact from "./pages/Contact";
+// import {
+//   getCentralContent,
+// } from "./services/requests.ts"
+import { getCentralContent } from "./services/requests.ts";
 
 /* ************************************************************************* */
 
@@ -32,6 +35,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <HomePage />,
+        loader: getCentralContent,
       },
       {
         path: "/NewGames",
@@ -70,11 +74,7 @@ if (rootElement == null) {
 }
 
 // Render the app inside the root element
-createRoot(rootElement).render(
-  <StrictMode>
-    <RouterProvider router={router} />
-  </StrictMode>,
-);
+createRoot(rootElement).render(<RouterProvider router={router} />);
 
 /**
  * Helpful Notes:

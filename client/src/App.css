@@ -3,3 +3,8 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+body {
+  background: -webkit-linear-gradient(180deg, #0b1825, #0c1c2c, #0d2339); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(180deg, #0b1825, #0c1c2c, #0d2339);
+}
