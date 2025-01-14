@@ -1,7 +1,8 @@
 import "./Header.css";
+import BoutonContext from "./BoutonContext";
 import Checkbox from "./Checkbox";
 
-export default function Header() {
+function Header() {
   return (
     <header>
       <Checkbox />
@@ -11,7 +12,12 @@ export default function Header() {
         {/* A remplacer par le composant pour la recherche */}
         <input name="myInput" defaultValue="Rechercher un jeu" />
         <button type="button">Search</button>
+        <div className="button_theme">
+          <BoutonContext />
+        </div>
       </div>
     </header>
   );
 }
+
+export default Header;
