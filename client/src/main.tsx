@@ -10,12 +10,13 @@ import App from "./App.tsx";
 // Import additional components for new routes
 // Try creating these components in the "pages" folder
 
-import Catalogue from "./pages/Catalogue/Catalogue.tsx";
-import GameDetails from "./pages/GameDetails/GameDetails.tsx";
-import HomePage from "./pages/HomePage/HomePage.tsx";
-import NewGames from "./pages/NewGames/NewGames.tsx";
-import Quizz from "./pages/Quizz/Quizz.tsx";
-import Results from "./pages/Results/Results.tsx";
+import Calendrier from "./pages/Calendrier/Calendrier";
+import Catalogue from "./pages/Catalogue/Catalogue";
+import GameDetails from "./pages/GameDetails/GameDetails";
+import HomePage from "./pages/HomePage/HomePage";
+import NewGames from "./pages/NewGames/NewGames";
+import Quizz from "./pages/Quizz/Quizz";
+import Results from "./pages/Results/Results";
 
 // import About from "./pages/About";
 // import Contact from "./pages/Contact";
@@ -52,6 +53,10 @@ const router = createBrowserRouter([
       {
         path: "/Catalogue",
         element: <Catalogue />,
+      },
+      {
+        path: "/Calendrier",
+        element: <Calendrier />,
       },
       {
         path: "/Quizz",

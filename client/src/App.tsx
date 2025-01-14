@@ -1,10 +1,17 @@
 import "./App.css";
 import { Outlet } from "react-router-dom";
+import Header from "./components/Header/Header";
+import NavBar from "./components/NavBar/Navbar";
 
 function App() {
   return (
     <>
-      <Outlet />
+      <Header />
+
+      <main className="outlet">
+        <NavBar />
+        <Outlet />
+      </main>
     </>
   );
 }
