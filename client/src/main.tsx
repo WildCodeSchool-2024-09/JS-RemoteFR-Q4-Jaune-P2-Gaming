@@ -18,6 +18,7 @@ import HomePage from "./pages/HomePage/HomePage";
 import NewGames from "./pages/NewGames/NewGames";
 import Quizz from "./pages/Quizz/Quizz";
 import Results from "./pages/Results/Results";
+import { getMetacritic } from "./services/request";
 
 // import About from "./pages/About";
 // import Contact from "./pages/Contact";
@@ -33,6 +34,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <HomePage />,
+        loader: getMetacritic,
       },
       {
         path: "/NewGames",
