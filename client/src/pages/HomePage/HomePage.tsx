@@ -12,9 +12,9 @@ interface GamesType {
 
 export default function HomePage() {
   const games = useLoaderData() as GamesType;
-  console.info(games);
+
   return (
-    <div className="centralContainer">
+    <div className="containerTop">
       <CentralContent games={games} />
     </div>
   );

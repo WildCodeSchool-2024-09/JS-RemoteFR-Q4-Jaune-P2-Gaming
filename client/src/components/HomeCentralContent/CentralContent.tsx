@@ -12,8 +12,9 @@ interface GamesProps {
 
 export default function CentralContent({ games }: GamesProps) {
   return (
-    <div className="centralContainer">
+    <>
       <div className="containerTop">
+        <h2 className="h2Top">Most Popular Game !</h2>
         <div className="containerImg">
           <img src={games.background_image} alt="" className="centralImg" />
         </div>
@@ -29,6 +30,11 @@ export default function CentralContent({ games }: GamesProps) {
           </div>
         </div>
       </div>
-    </div>
+      <div className="containerBot">
+        <div>
+          <h2 className="h2New">Les Nouveautées</h2>
+        </div>
+      </div>
+    </>
   );
 }

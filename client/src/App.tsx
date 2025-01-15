@@ -6,11 +6,12 @@ import NavBar from "./components/NavBar/Navbar";
 function App() {
   return (
     <>
-      <Header />
-
       <main className="outlet">
-        <NavBar />
-        <Outlet />
+        <Header />
+        <div className="underH">
+          <NavBar />
+          <Outlet />
+        </div>
       </main>
     </>
   );
