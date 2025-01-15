@@ -11,6 +11,14 @@ interface MetacriticTypes {
   rating_top: number;
 }
 
+interface MetacriticTypes {
+  id: number;
+  background_image: string;
+  name: string;
+  rating: number;
+  rating_top: number;
+}
+
 interface GamesType {
   name: string;
   src: string;
