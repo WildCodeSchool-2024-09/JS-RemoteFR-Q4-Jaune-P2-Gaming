@@ -10,6 +10,8 @@
 .outlet {
   background: -webkit-linear-gradient(180deg, #0b1825, #0d243b, #10355a); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(180deg, #0b1825, #0d243b, #10355a);
+  display: flex;
+  flex-direction: column;
 }
 
 body {

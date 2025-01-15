@@ -5,7 +5,7 @@ nav {
   flex-direction: column;
   background: -webkit-linear-gradient(180deg, #0b1825, #0d243b, #10355a); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(180deg, #0b1825, #0d243b, #10355a);
-  width: 10svw;
+  width: 10vw;
   align-items: center;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }

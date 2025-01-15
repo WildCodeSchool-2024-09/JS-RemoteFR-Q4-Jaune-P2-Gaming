@@ -23,44 +23,50 @@ import Results from "./pages/Results/Results";
 // import {
 //   getCentralContent,
 // } from "./services/requests.ts"
-import { getCentralContent } from "./services/requests.ts";
+import { getGames } from "./services/requests.ts";
 
 /* ************************************************************************* */
-
 // Create router configuration with routes
 // You can add more routes as you build out your app!
 const router = createBrowserRouter([
   {
     element: <App />,
+
     children: [
       {
         path: "/",
         element: <HomePage />,
-        loader: getCentralContent,
+        loader: getGames,
       },
       {
         path: "/NewGames",
         element: <NewGames />,
+        // loader: getGames,
       },
       {
         path: "/GameDetails",
         element: <GameDetails />,
+        // loader: getGames,
       },
       {
         path: "/Results",
         element: <Results />,
+        // loader: getGames,
       },
       {
         path: "/Catalogue",
         element: <Catalogue />,
+        // loader: getGames,
       },
       {
         path: "/Calendrier",
         element: <Calendrier />,
+        // loader: getGames,
       },
       {
         path: "/Quizz",
         element: <Quizz />,
+        // loader: getGames,
       },
     ],
   },
