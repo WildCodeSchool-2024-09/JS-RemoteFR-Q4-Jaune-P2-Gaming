@@ -21,7 +21,7 @@ import Results from "./pages/Results/Results";
 
 // import About from "./pages/About";
 // import Contact from "./pages/Contact";
-
+import { getCalendriers } from "./services/RequestsCalendrier";
 /* ************************************************************************* */
 
 // Create router configuration with routes
@@ -51,8 +51,9 @@ const router = createBrowserRouter([
         element: <Catalogue />,
       },
       {
-        path: "/Calendrier",
+        path: "/calendrier",
         element: <Calendrier />,
+        loader: getCalendriers,
       },
       {
         path: "/Quizz",
