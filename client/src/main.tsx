@@ -1,12 +1,11 @@
 // Import necessary modules from React and React Router
-import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
 /* ************************************************************************* */
 
 // Import the main app component
-import App from "./App";
+import App from "./App.tsx";
 
 // Import additional components for new routes
 // Try creating these components in the "pages" folder
@@ -18,47 +17,56 @@ import HomePage from "./pages/HomePage/HomePage";
 import NewGames from "./pages/NewGames/NewGames";
 import Quizz from "./pages/Quizz/Quizz";
 import Results from "./pages/Results/Results";
-import { getMetacritic } from "./services/request";
 
 // import About from "./pages/About";
 // import Contact from "./pages/Contact";
+// import {
+//   getCentralContent,
+// } from "./services/requests.ts"
+import { getGames } from "./services/requests.ts";
 
 /* ************************************************************************* */
-
 // Create router configuration with routes
 // You can add more routes as you build out your app!
 const router = createBrowserRouter([
   {
     element: <App />,
+
     children: [
       {
         path: "/",
         element: <HomePage />,
-        loader: getMetacritic,
+        loader: getGames,
       },
       {
         path: "/NewGames",
         element: <NewGames />,
+        // loader: getGames,
       },
       {
         path: "/GameDetails",
         element: <GameDetails />,
+        // loader: getGames,
       },
       {
         path: "/Results",
         element: <Results />,
+        // loader: getGames,
       },
       {
         path: "/Catalogue",
         element: <Catalogue />,
+        // loader: getGames,
       },
       {
         path: "/Calendrier",
         element: <Calendrier />,
+        // loader: getGames,
       },
       {
         path: "/Quizz",
         element: <Quizz />,
+        // loader: getGames,
       },
     ],
   },
@@ -77,11 +85,7 @@ if (rootElement == null) {
 }
 
 // Render the app inside the root element
-createRoot(rootElement).render(
-  <StrictMode>
-    <RouterProvider router={router} />
-  </StrictMode>,
-);
+createRoot(rootElement).render(<RouterProvider router={router} />);
 
 /**
  * Helpful Notes:
