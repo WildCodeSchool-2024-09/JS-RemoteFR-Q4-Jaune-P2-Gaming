@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.containerTop {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.h2Top {
+  color: white;
+  font-weight: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-bottom: 3rem;
+}
+
+.containerImg {
+  display: flex;
+  justify-content: center;
+  border-radius: 3% 3% 0 0;
+  color: red;
+  box-shadow: 0px 2px 20px 2px black;
+}
+
+.centralImg {
+  width: 50svw;
+  height: 25svw;
+}
+
+.containerInfo {
+  width: 50svw;
+  background-color: rgba(52, 50, 50, 0.5);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border-radius: 0 0 3% 3%;
+  box-shadow: 0 0 20px 2px black;
+}
+
+.platforms {
+  color: white;
+  font-size: 1.5vw;
+  margin-left: 1vw;
+  font-weight: bold;
+}
+
+.infoPlatforms {
+  color: white;
+  margin-left: 1vw;
+}
+
+.centralName {
+  font-size: 1.5vw;
+  color: white;
+  margin-left: 1vw;
+}
+
+.containerRate {
+  max-width: 10vw;
+  margin-top: 0.5rem;
+  margin-left: 0.5rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  background-color: rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 12px 5px rgb(0, 0, 0);
+}
+
+.pRate,
+.apiRate {
+  color: white;
+  font-size: 1svw;
+}
+
+.h2New {
+  margin-top: 3rem;
+  color: white;
+}

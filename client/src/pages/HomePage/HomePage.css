@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.homemenu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+.homemenu > p {
+  color: #fff;
+}
+
+.home_content {
+  display: flex;
+  flex-direction: column;
+}
+
+.listejeuxmeta {
+  display: flex;
+  flex-direction: column;
+  width: 10%;
+  overflow-y: auto;
+  max-height: 35rem;
+}
+
+.listejeuxmeta::-webkit-scrollbar {
+  display: none;
+}
