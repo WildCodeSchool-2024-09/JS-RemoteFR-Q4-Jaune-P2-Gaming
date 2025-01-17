@@ -18,11 +18,7 @@ import NewGames from "./pages/NewGames/NewGames";
 import Quizz from "./pages/Quizz/Quizz";
 import Results from "./pages/Results/Results";
 
-// import About from "./pages/About";
-// import Contact from "./pages/Contact";
-// import {
-//   getCentralContent,
-// } from "./services/requests.ts"
+import { getCalendriers } from "./services/RequestsCalendrier";
 import { getGames } from "./services/requests.ts";
 
 /* ************************************************************************* */
@@ -59,9 +55,9 @@ const router = createBrowserRouter([
         // loader: getGames,
       },
       {
-        path: "/Calendrier",
+        path: "/calendrier",
         element: <Calendrier />,
-        // loader: getGames,
+        loader: getCalendriers,
       },
       {
         path: "/Quizz",
