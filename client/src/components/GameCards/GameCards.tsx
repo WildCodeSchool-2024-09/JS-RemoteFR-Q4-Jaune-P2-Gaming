@@ -1,6 +1,6 @@
 import "./GameCards.css";
-import { useState, useEffect } from "react";
 import axios from "axios";
+import { useEffect, useState } from "react";
 
 // Interfaces
 interface Platform {
