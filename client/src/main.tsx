@@ -23,7 +23,7 @@ import Results from "./pages/Results/Results";
 // import {
 //   getCentralContent,
 // } from "./services/requests.ts"
-import { getGames, getNewGames } from "./services/requests.ts";
+import { getCalendriers, getGames, getNewGames } from "./services/requests.ts";
 
 /* ************************************************************************* */
 // Create router configuration with routes
@@ -65,9 +65,9 @@ const router = createBrowserRouter([
         // loader: getGames,
       },
       {
-        path: "/Calendrier",
+        path: "/calendrier",
         element: <Calendrier />,
-        // loader: getGames,
+        loader: getCalendriers,
       },
       {
         path: "/Quizz",
