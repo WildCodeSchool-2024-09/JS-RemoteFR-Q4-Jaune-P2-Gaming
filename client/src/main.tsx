@@ -23,7 +23,7 @@ import Results from "./pages/Results/Results";
 // import {
 //   getCentralContent,
 // } from "./services/requests.ts"
-import { getGames } from "./services/requests.ts";
+import { getGames, getNewGames } from "./services/requests.ts";
 
 /* ************************************************************************* */
 // Create router configuration with routes
@@ -36,12 +36,18 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <HomePage />,
-        loader: getGames,
+        loader: async () => ({
+          games: await getGames(),
+          newGames: await getNewGames(),
+        }),
       },
       {
         path: "/NewGames",
         element: <NewGames />,
-        // loader: getGames,
+        loader: async () => ({
+          games: await getGames(),
+          newGames: await getNewGames(),
+        }),
       },
       {
         path: "/GameDetails",

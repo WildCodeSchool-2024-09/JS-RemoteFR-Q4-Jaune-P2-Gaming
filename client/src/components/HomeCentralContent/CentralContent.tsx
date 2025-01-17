@@ -1,6 +1,6 @@
 import "./CentralContent.css";
 
-interface GamesProps {
+interface CentralContentType {
   game: {
     name: string;
     src: string;
@@ -10,23 +10,27 @@ interface GamesProps {
   };
 }
 
-export default function CentralContent({ game }: GamesProps) {
+export default function CentralContent({ game }: CentralContentType) {
   return (
     <>
       <div className="containerTop">
         <h2 className="h2Top">Most Popular Game !</h2>
-        <div className="containerImg">
+        <a href="./GameDetails.tsx">
           <img src={game.background_image} alt="" className="centralImg" />
-        </div>
+        </a>
         <div className="containerInfo">
-          <p className="platforms">Platforms</p>
-          <p className="infoPlatforms">PC PS XBOX</p>
-          <h2 className="centralName">{game.name}</h2>
+          <a href="./GameDetails.tsx">
+            <p className="platforms">Platforms</p>
+            <p className="infoPlatforms">PC PS XBOX</p>
+            <h2 className="centralName">{game.name}</h2>
+          </a>
           <div className="containerRate">
-            <p className="pRate">Rate</p>
-            <p className="apiRate">
-              {game.rating}/5 on {game.ratings_count}
-            </p>
+            <a href="./GameDetails.tsx">
+              <p className="pRate">Rate</p>
+              <p className="apiRate">
+                {game.rating}/5 on {game.ratings_count}
+              </p>
+            </a>
           </div>
         </div>
       </div>

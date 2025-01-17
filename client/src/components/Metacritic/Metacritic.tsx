@@ -1,16 +1,18 @@
 import "./Metacritic.css";
 
-interface MetacriticTypes {
+interface MetaCriticGameType {
   game: {
-    id: number;
-    background_image: string;
     name: string;
+    id: number;
+    src: string;
+    background_image: string;
     rating: number;
+    ratings_count: number;
     rating_top: number;
   };
 }
 
-export function Metacritic({ game }: MetacriticTypes) {
+export function Metacritic({ game }: MetaCriticGameType) {
   return (
     <>
       <div className="meta">

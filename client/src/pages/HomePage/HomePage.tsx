@@ -3,39 +3,42 @@ import CentralContent from "../../components/HomeCentralContent/CentralContent";
 import { Metacritic } from "../../components/Metacritic/Metacritic";
 import "./HomePage.css";
 
-interface MetacriticTypes {
-  id: number;
-  background_image: string;
-  name: string;
-  rating: number;
-  rating_top: number;
+// interface NewGamesProps {
+//   newGames: {
+//     game: string;
+//     name: string;
+//     id: number;
+//     src: string;
+//     background_image: string;
+//     rating: number;
+//     ratings_count: number;
+//     rating_top: number;
+//   };
+// }
+
+interface GamesDataType {
+  games: GamesProps[];
 }
 
-interface MetacriticTypes {
+interface GamesProps {
+  name: string;
   id: number;
-  background_image: string;
-  name: string;
-  rating: number;
-  rating_top: number;
-}
-
-interface GamesType {
-  name: string;
   src: string;
   background_image: string;
   rating: number;
   ratings_count: number;
+  rating_top: number;
 }
 
 export default function HomePage() {
-  const games = useLoaderData() as GamesType[];
-  const data = useLoaderData() as MetacriticTypes[];
-  console.info(games);
-  const filteredData = data.filter((game) => game.rating > 4);
+  const data = useLoaderData() as GamesDataType;
 
-  const sortedData = filteredData.sort((a, b) => b.rating - a.rating);
+  const games = data.games;
 
-  console.info(sortedData);
+  const filteredGames = games.filter((game) => game.rating > 4);
+
+  const sortedData = filteredGames.sort((a, b) => b.rating - a.rating);
+
   return (
     <main className="homemenu">
       <div className="containerTop">
