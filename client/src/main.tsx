@@ -18,8 +18,7 @@ import NewGames from "./pages/NewGames/NewGames";
 import Quizz from "./pages/Quizz/Quizz";
 import Results from "./pages/Results/Results";
 
-import { getCalendriers } from "./services/RequestsCalendrier";
-import { getGames } from "./services/requests.ts";
+import { getCalendriers, getGames, getNewGames } from "./services/requests.ts";
 
 /* ************************************************************************* */
 // Create router configuration with routes
@@ -32,12 +31,18 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <HomePage />,
-        loader: getGames,
+        loader: async () => ({
+          games: await getGames(),
+          newGames: await getNewGames(),
+        }),
       },
       {
         path: "/NewGames",
         element: <NewGames />,
-        // loader: getGames,
+        loader: async () => ({
+          games: await getGames(),
+          newGames: await getNewGames(),
+        }),
       },
       {
         path: "/GameDetails",

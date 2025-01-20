@@ -1,19 +1,18 @@
 import { useLoaderData } from "react-router-dom";
 import CalendrierCard from "../../components/calendrierCard/CalendrierCard";
 
-interface platform{
-  platform:{
-      name:string};
+interface platform {
+  platform: {
+    name: string;
+  };
 }
 
-interface gameType{
-
+interface gameType {
   id: number;
   name: string;
   background_image: string;
-  released:string;
+  released: string;
   platforms: platform[];
-
 }
 
 export default function Calendrier() {

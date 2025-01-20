@@ -7,29 +7,15 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.outlet {
-  background: -webkit-linear-gradient(180deg, #0b1825, #0d243b, #10355a); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(180deg, #0b1825, #0d243b, #10355a);
-  display: flex;
-  flex-direction: column;
-}
-
 body {
   background: -webkit-linear-gradient(180deg, #0b1825, #0d243b, #10355a); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(180deg, #0b1825, #0d243b, #10355a);
 }
 
-.underH {
-  display: flex;
-  background: -webkit-linear-gradient(180deg, #0b1825, #0d243b, #10355a); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(180deg, #0b1825, #0d243b, #10355a);
+main {
+  width: 100%;
 }
 
-.underH {
-  justify-content: space-between;
+.centralPage {
+  width: 100%;
 }
-
-/* @media screen and (min-width: 980px) {
-  .outlet {
-  }
-} */

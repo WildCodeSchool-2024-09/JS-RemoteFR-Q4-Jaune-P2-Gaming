@@ -6,9 +6,9 @@ import NavBar from "./components/NavBar/Navbar";
 function App() {
   return (
     <>
-      <main className="outlet">
+      <main>
         <Header />
-        <div className="underH">
+        <div className="centralPage">
           <NavBar />
           <Outlet />
         </div>

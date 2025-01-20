@@ -1,24 +1,24 @@
 import "./CalendrierCard.css";
 
-interface platform{
-    platform:{
-        name:string};
+interface platform {
+  platform: {
+    name: string;
+  };
 }
 
-interface gameType{
-    game:{
+interface gameType {
+  game: {
     id: number;
     name: string;
     background_image: string;
-    released:string;
+    released: string;
     platforms: platform[];
-    }
+  };
 }
 
+export default function CalendrierCard({ game }: gameType) {
+  const platforms = game.platforms;
 
-export default function CalendrierCard({ game }:gameType) {
-    const platforms= game.platforms
-   
   return (
     <>
       <img src={game.background_image} alt="" />
@@ -27,7 +27,6 @@ export default function CalendrierCard({ game }:gameType) {
 
       {/* verifie si game.platforms est toujours un tableau (même vide)  */}
       <p>{platforms?.map((p) => p.platform.name).join(" - ") || []}</p>
-
     </>
   );
 }
