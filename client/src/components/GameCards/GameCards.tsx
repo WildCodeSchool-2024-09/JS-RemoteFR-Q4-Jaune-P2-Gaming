@@ -16,10 +16,6 @@ interface Game {
   platforms: Platform[];
 }
 
-interface ApiResponse {
-  results: Game[];
-}
-
 // Function
 export default function GameCards() {
   const [games, setGames] = useState<Game[]>([]);
@@ -30,9 +26,7 @@ export default function GameCards() {
   // API
   useEffect(() => {
     axios
-      .get<ApiResponse>(
-        "https://api.rawg.io/api/games?key=6ad216f06f3c4053946bcc9bab823408",
-      )
+      .get(`https://api.rawg.io/api/games?key=${import.meta.env.VITE_API_KEY}`)
       .then((response) => {
         setGames(response.data.results);
         setLoading(false);
