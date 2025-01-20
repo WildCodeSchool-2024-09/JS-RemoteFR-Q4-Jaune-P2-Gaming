@@ -1,5 +1,5 @@
-import GameCards from "../../components/GameCards/GameCards";
 import "./Catalogue.css";
+import GameCards from "../../components/GameCards/GameCards";
 
 export default function Catalogue() {
   return (

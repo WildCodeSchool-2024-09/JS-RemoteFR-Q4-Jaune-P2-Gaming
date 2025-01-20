@@ -1,12 +1,10 @@
 // Import necessary modules from React and React Router
-import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-
 /* ************************************************************************* */
 
 // Import the main app component
-import App from "./App";
+import App from "./App.tsx";
 
 // Import additional components for new routes
 // Try creating these components in the "pages" folder
@@ -19,11 +17,9 @@ import NewGames from "./pages/NewGames/NewGames";
 import Quizz from "./pages/Quizz/Quizz";
 import Results from "./pages/Results/Results";
 
-// import About from "./pages/About";
-// import Contact from "./pages/Contact";
+import { getCalendriers, getGames, getNewGames } from "./services/requests.ts";
 
 /* ************************************************************************* */
-
 // Create router configuration with routes
 // You can add more routes as you build out your app!
 const router = createBrowserRouter([
@@ -33,10 +29,18 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <HomePage />,
+        loader: async () => ({
+          games: await getGames(),
+          newGames: await getNewGames(),
+        }),
       },
       {
         path: "/NewGames",
         element: <NewGames />,
+        loader: async () => ({
+          games: await getGames(),
+          newGames: await getNewGames(),
+        }),
       },
       {
         path: "/GameDetails",
@@ -53,6 +57,11 @@ const router = createBrowserRouter([
       {
         path: "/Calendrier",
         element: <Calendrier />,
+      },
+      {
+        path: "/calendrier",
+        element: <Calendrier />,
+        loader: getCalendriers,
       },
       {
         path: "/Quizz",
@@ -75,11 +84,7 @@ if (rootElement == null) {
 }
 
 // Render the app inside the root element
-createRoot(rootElement).render(
-  <StrictMode>
-    <RouterProvider router={router} />
-  </StrictMode>,
-);
+createRoot(rootElement).render(<RouterProvider router={router} />);
 
 /**
  * Helpful Notes:
