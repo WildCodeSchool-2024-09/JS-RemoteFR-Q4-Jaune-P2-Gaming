@@ -3,19 +3,6 @@ import CentralContent from "../../components/HomeCentralContent/CentralContent";
 import { Metacritic } from "../../components/Metacritic/Metacritic";
 import "./HomePage.css";
 
-// interface NewGamesProps {
-//   newGames: {
-//     game: string;
-//     name: string;
-//     id: number;
-//     src: string;
-//     background_image: string;
-//     rating: number;
-//     ratings_count: number;
-//     rating_top: number;
-//   };
-// }
-
 interface GamesDataType {
   games: GamesProps[];
 }
