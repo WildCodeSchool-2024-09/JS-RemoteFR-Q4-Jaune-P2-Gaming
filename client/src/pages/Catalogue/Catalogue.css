@@ -1,0 +1,21 @@
+.cards-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h2 {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem;
+  font-size: 2rem;
+  color: hsla(0, 0%, 100%, 0.8);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}

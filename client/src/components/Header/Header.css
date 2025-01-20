@@ -5,11 +5,10 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 header {
-  /* background-color: rgb(16, 29, 43); */
+  background-color: rgb(16, 29, 43);
   display: flex;
   align-items: center;
   height: 5rem;

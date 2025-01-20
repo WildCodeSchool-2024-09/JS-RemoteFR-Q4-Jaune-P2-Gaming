@@ -4,6 +4,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+.outlet {
+  display: flex;
+  background-color: rgb(16, 29, 43);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 

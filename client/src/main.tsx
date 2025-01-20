@@ -1,7 +1,6 @@
 // Import necessary modules from React and React Router
 import { createRoot } from "react-dom/client";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-
 /* ************************************************************************* */
 
 // Import the main app component
@@ -26,7 +25,6 @@ import { getCalendriers, getGames, getNewGames } from "./services/requests.ts";
 const router = createBrowserRouter([
   {
     element: <App />,
-
     children: [
       {
         path: "/",
@@ -47,17 +45,18 @@ const router = createBrowserRouter([
       {
         path: "/GameDetails",
         element: <GameDetails />,
-        // loader: getGames,
       },
       {
         path: "/Results",
         element: <Results />,
-        // loader: getGames,
       },
       {
         path: "/Catalogue",
         element: <Catalogue />,
-        // loader: getGames,
+      },
+      {
+        path: "/Calendrier",
+        element: <Calendrier />,
       },
       {
         path: "/calendrier",
@@ -67,7 +66,6 @@ const router = createBrowserRouter([
       {
         path: "/Quizz",
         element: <Quizz />,
-        // loader: getGames,
       },
     ],
   },
