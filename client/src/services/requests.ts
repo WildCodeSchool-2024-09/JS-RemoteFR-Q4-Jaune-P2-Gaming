@@ -28,4 +28,15 @@ const getCalendriers = () => {
     .catch((error) => console.error(error));
 };
 
-export { getGames, getNewGames, getCalendriers };
+const getDetailGames = (id: string | undefined) => {
+  console.info(typeof id);
+  const idNumber = Number(id);
+  return axios
+    .get(
+      `https://api.rawg.io/api/games/${idNumber}?key=${import.meta.env.VITE_API_KEY}`,
+    )
+    .then((response) => response.data)
+    .catch((error) => console.error(error));
+};
+
+export { getGames, getNewGames, getCalendriers, getDetailGames };
