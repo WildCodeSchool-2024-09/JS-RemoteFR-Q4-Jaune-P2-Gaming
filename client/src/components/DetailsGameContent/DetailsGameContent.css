@@ -5,19 +5,26 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.alldetail {
+.allDetail {
   width: 100%;
   display: flex;
   flex-direction: column;
+}
+
+.main {
+  width: 50svw;
+  background-color: rgba(52, 50, 50, 0.5);
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  gap: 1rem;
+  box-shadow: 0 0 20px 2px black;
   justify-content: center;
-  margin-top: 2rem;
-  right: 5rem;
+  text-align: center;
 }
 
 .image {
   display: flex;
-  justify-content: center;
   border-radius: 3% 3% 0 0;
   color: red;
   box-shadow: 0px 2px 20px 2px black;
@@ -28,18 +35,7 @@
 .centralImage {
   width: 50svw;
   height: 25svw;
-}
-
-.main {
-  width: 50svw;
-  background-color: rgba(52, 50, 50, 0.5);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-  border-radius: 0 0 3% 3%;
-  box-shadow: 0 0 20px 2px black;
-  justify-content: center;
+  border-radius: 3% 3% 0 0;
 }
 
 .gameName {
@@ -67,6 +63,8 @@
 .description {
   color: white;
   font-size: 1rem;
+
+  margin: 0 2rem 5rem 2rem;
 }
 
 .esb_rating {
@@ -82,22 +80,38 @@
   padding: 3rem;
 }
 
-.ratings {
-  width: 50svw;
-  background-color: rgba(52, 50, 50, 0.5);
+.ratinGame {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  color: white;
   gap: 1rem;
-  border-radius: 0 0 3% 3%;
-  box-shadow: 0 0 20px 2px black;
-  padding: 3rem;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.ratinGame > p > b {
+  font-size: 2rem;
 }
 
 .rates {
   display: flex;
   color: white;
-  gap: 2rem;
+  gap: 4rem;
   align-items: center;
+  margin-bottom: 2rem;
+}
+
+.ratings {
+  width: 50svw;
+  background-color: rgba(52, 50, 50, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  border-radius: 0 0 3% 3%;
+  box-shadow: 0 0 20px 2px black;
+  padding: 3rem;
 }
 
 .titre {
@@ -105,25 +119,144 @@
   margin-bottom: 2rem;
 }
 
-.ratings_info {
+.ratings_infos {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
-.ratings_info > p {
+.ratings_infos > p {
+  display: flex;
+  flex-direction: column;
+
   color: white;
+  margin-bottom: 1rem;
 }
 
 .titre2 {
   margin-bottom: 2rem;
 }
 
+.metacriticmenu {
+  width: 50svw;
+  background-color: rgba(52, 50, 50, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  border-radius: 0 0 3% 3%;
+  box-shadow: 0 0 20px 2px black;
+  padding: 3rem;
+}
+
 .metacritic {
+  display: flex;
+  flex-direction: column;
   color: white;
-  margin-top: 2rem;
   gap: 1rem;
 }
 
 .note {
+  color: white;
   font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.platformsmenu {
+  width: 50svw;
+  background-color: rgba(52, 50, 50, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  border-radius: 0 0 3% 3%;
+  box-shadow: 0 0 20px 2px black;
+  padding: 3rem;
+}
+
+.platforms {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  align-items: center;
+}
+
+.platforms > h2 {
+  margin-bottom: 4rem;
+}
+
+.metaplatforms {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  margin-top: 3rem;
+}
+
+.metaplatforms > p {
+  color: white;
+  font-size: 1.2rem;
+}
+
+@media screen and (max-width: 990px) {
+  .allDetail {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .centralImage {
+    height: 15rem;
+    width: 20rem;
+    object-fit: cover;
+  }
+  .image {
+    flex-direction: column;
+    height: 15rem;
+    width: 15rem;
+    margin-right: 5rem;
+  }
+
+  .main {
+    display: flex;
+    flex-direction: column;
+    width: 20rem;
+    align-content: center;
+    text-align: center;
+  }
+
+  .titre_name {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .gameName {
+    font-size: 2rem;
+  }
+
+  .esb_rating {
+    width: 20rem;
+  }
+
+  .ratings {
+    width: 20rem;
+  }
+
+  .rates {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+  }
+
+  .ratings_infos:nth-child(2) {
+    margin-left: 1.6rem;
+  }
+
+  .metacriticmenu {
+    width: 20rem;
+  }
+
+  .platformsmenu {
+    width: 20rem;
+  }
 }

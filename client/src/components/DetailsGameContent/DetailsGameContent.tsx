@@ -7,7 +7,7 @@ interface DetailsTypes {
     name: string;
     released: string;
     platform: string;
-    description: string;
+    description_raw: string;
     rating: number;
     rating_top: number;
 
@@ -23,19 +23,18 @@ interface DetailsTypes {
       percent: number;
     }[];
 
-    short_screenshots: {
-      id: number;
-      image: string;
-    };
+    metacritic_platforms: {
+      matascore: number;
+      url: string;
+      platform: {
+        name: string;
+        platform: number;
+      };
+    }[];
   };
 }
 
 export default function DetailsGamesContent({ game }: DetailsTypes) {
-  const description_clear = game.description
-    .replace(/<p>/g, "")
-    .replace(/<\/p>/g, "");
-  console.info(game.ratings);
-
   return (
     <>
       <div className="allDetail">
@@ -50,40 +49,43 @@ export default function DetailsGamesContent({ game }: DetailsTypes) {
           <p className="gameName">
             <b>{game.name}</b>
           </p>
+
           <p className="releaseDate"> Sortie le : {game.released}</p>
           <p className="platform">{game.platform}</p>
-          <p className="description">{description_clear}</p>
+          <p className="description">{game.description_raw}</p>
         </article>
         <article className="esb_rating">
-          <p className="ratinGame">
-            Catégorie : <b>{game.esrb_rating.name}</b>
-          </p>
+          <h2>
+            <b>Catégorie</b>
+          </h2>
+          <p className="ratinGame">{game.esrb_rating.name}</p>
         </article>
         <article className="ratings">
-          <div className="titre_rates">
-            <div className="titre">
-              <h2>Rates</h2>
-            </div>
-            <div className="rates">
-              {game.ratings && game.ratings.length > 0 ? (
-                game.ratings.map((rate) => (
-                  <div className="ratings_infos" key={rate.id}>
-                    <p>
-                      <b>Rating :</b> {rate.title}
-                    </p>
-                    <p>
-                      <b>Count :</b> {rate.count}
-                    </p>
-                    <p>
-                      <b>Percent :</b> {rate.percent}%
-                    </p>
-                  </div>
-                ))
-              ) : (
-                <p>No ratings available</p>
-              )}
-            </div>
+          <div className="titre">
+            <h2>Rates</h2>
           </div>
+          <div className="rates">
+            {game.ratings && game.ratings.length > 0 ? (
+              game.ratings.map((rate) => (
+                <div className="ratings_infos" key={rate.id}>
+                  <p>
+                    <b>Rating :</b> {rate.title}
+                  </p>
+                  <p>
+                    <b>Count :</b> {rate.count}
+                  </p>
+                  <p>
+                    <b>Percent :</b> {rate.percent}%
+                  </p>
+                </div>
+              ))
+            ) : (
+              <p>No ratings available</p>
+            )}
+          </div>
+        </article>
+
+        <article className="metacriticmenu">
           <div className="metacritic">
             <div className="titre2">
               <h2>Metacritic</h2>
@@ -91,6 +93,23 @@ export default function DetailsGamesContent({ game }: DetailsTypes) {
             <p className="note">
               {game.rating}/{game.rating_top}
             </p>
+          </div>
+        </article>
+        <article className="platformsmenu">
+          <div className="platforms">
+            <h2>Platforms</h2>
+            {game.metacritic_platforms &&
+            game.metacritic_platforms.length > 0 ? (
+              game.metacritic_platforms.map((platform) => (
+                <div className="metaplatforms" key={platform.platform.platform}>
+                  <p>
+                    <i>{platform.platform.name}</i>
+                  </p>
+                </div>
+              ))
+            ) : (
+              <p>No information</p>
+            )}
           </div>
         </article>
       </div>

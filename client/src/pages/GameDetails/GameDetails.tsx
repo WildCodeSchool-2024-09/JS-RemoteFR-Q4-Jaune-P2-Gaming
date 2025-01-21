@@ -8,7 +8,7 @@ interface DetailsTypes {
   name: string;
   released: string;
   platform: string;
-  description: string;
+  description_raw: string;
   rating: number;
   rating_top: number;
 
@@ -24,15 +24,19 @@ interface DetailsTypes {
     percent: number;
   }[];
 
-  short_screenshots: {
-    id: number;
-    image: string;
-  };
+  metacritic_platforms: {
+    matascore: number;
+    url: string;
+    platform: {
+      name: string;
+      platform: number;
+    };
+  }[];
 }
 
 export default function GameDetails() {
   const details = useLoaderData() as DetailsTypes;
-
+  console.info(details);
   return (
     <div className="pagedetail">
       <DetailsGameContent game={details} />
