@@ -20,6 +20,7 @@
   gap: 1rem;
   box-shadow: 0 0 20px 2px black;
   justify-content: center;
+  text-align: center;
 }
 
 .image {
@@ -220,6 +221,7 @@
     flex-direction: column;
     width: 20rem;
     align-content: center;
+    text-align: center;
   }
 
   .titre_name {
