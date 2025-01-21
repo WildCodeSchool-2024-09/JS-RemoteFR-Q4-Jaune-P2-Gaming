@@ -1,7 +1,43 @@
+.pagecalendrier {
+  display: flex;
+  flex-direction: column;
+}
+
 h1 {
-  color: black;
+  color: white;
 }
 
 p {
-  color: black;
+  color: white;
+}
+
+.calendrierCard {
+  background-color: hwb(212 19% 68% / 0.671);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 1rem;
+  margin: 1rem;
+  line-height: 2rem;
+  /* width: 1066px; */
+  width: 100%;
+}
+.calendrierCard > img {
+  /* width: auto; */
+  height: 15rem;
+  max-width: 426px;
+}
+
+.gametitle {
+  font-size: 1.6rem;
+  font-weight: 600;
+  /*white-space: nowrap; affiche sur 1ligne */
+}
+
+.calendrierCardDetail {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 1rem;
+  min-width: 38rem;
 }

@@ -61,10 +61,6 @@ const router = createBrowserRouter([
         element: <Catalogue />,
       },
       {
-        path: "/Calendrier",
-        element: <Calendrier />,
-      },
-      {
         path: "/calendrier",
         element: <Calendrier />,
         loader: getCalendriers,

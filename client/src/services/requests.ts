@@ -19,9 +19,14 @@ const getNewGames = () => {
 };
 
 const getCalendriers = () => {
+  const today = new Date();
+  const tomorrow = new Date(today);
+  tomorrow.setDate(tomorrow.getDate() + 1);
+  const tomorrowFormatted = tomorrow.toISOString().split("T")[0];
   return axios
     .get(
-      `https://api.rawg.io/api/games?dates=2025-01-10,2025-10-10&ordering=-added&key=${import.meta.env.VITE_API_KEY}`,
+      // `https://api.rawg.io/api/games?dates=2025-01-10,2025-10-10&ordering=-added&key=${import.meta.env.VITE_API_KEY}`,
+      `https://api.rawg.io/api/games?dates=${tomorrowFormatted},2025-10-10&ordering=-added&key=${import.meta.env.VITE_API_KEY}`,
     )
 
     .then((response) => response.data.results)
