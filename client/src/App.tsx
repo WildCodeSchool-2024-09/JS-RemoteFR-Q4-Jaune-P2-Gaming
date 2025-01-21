@@ -9,8 +9,12 @@ function App() {
       <main>
         <Header />
         <div className="centralPage">
-          <NavBar />
-          <Outlet />
+          <div className="navbar">
+            <NavBar />
+          </div>
+          <div className="outlet">
+            <Outlet />
+          </div>
         </div>
       </main>
     </>
