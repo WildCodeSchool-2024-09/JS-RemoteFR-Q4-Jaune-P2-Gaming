@@ -24,7 +24,6 @@
 
 .image {
   display: flex;
-  justify-content: center;
   border-radius: 3% 3% 0 0;
   color: red;
   box-shadow: 0px 2px 20px 2px black;
@@ -198,6 +197,12 @@
 }
 
 @media screen and (max-width: 990px) {
+  .allDetail {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
   .centralImage {
     height: 15rem;
     width: 20rem;

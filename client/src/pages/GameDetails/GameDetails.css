@@ -9,3 +9,10 @@
   display: flex;
   width: 100%;
 }
+
+@media screen {
+  .pagedetail {
+    display: flex;
+    width: 100%;
+  }
+}
