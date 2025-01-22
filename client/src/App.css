@@ -7,11 +7,9 @@
   font-family: "Roboto", sans-serif;
 }
 
-.centralpage {
-  display: flex;
-  align-items: center;
-}
-
+/* .centralPage > nav {
+  background-color: red;
+} */
 .outlet {
   display: flex;
   background-color: rgb(16, 29, 43);

@@ -22,7 +22,7 @@ export default function Header() {
   return (
     <header>
       <Checkbox />
-      <img src="/public/images/logo.webp" alt="logo" />
+      <img className="logoHeader" src="/public/images/logo.webp" alt="logo" />
       <h1>Wild Games</h1>
       <div className="search">
         <form onSubmit={sendSearchForm}>

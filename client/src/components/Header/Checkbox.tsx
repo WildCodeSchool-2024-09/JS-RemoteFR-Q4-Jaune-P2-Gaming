@@ -38,16 +38,16 @@ const Checkbox = () => {
           <div className={`menu ${isOpen ? "open" : ""}`}>
             <ul>
               <li>
-                <Link to="/">Homepage</Link>
+                <Link to="/">Home</Link>
               </li>
               <li>
                 <Link to="/NewGames">NewGames</Link>
               </li>
               <li>
-                <Link to="/Catalogue">Catalogue</Link>
+                <Link to="/Catalogue">Catalog</Link>
               </li>
               <li>
-                <Link to="/Calendrier">Calendrier</Link>
+                <Link to="/Calendrier">upcoming releases</Link>
               </li>
             </ul>
           </div>
