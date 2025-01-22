@@ -23,16 +23,18 @@ export default function Results() {
   }
 
   return (
-    <main>
-      <h2>
-        There {results.length > 1 ? "are" : "is"} {results.length} result
-        {results.length > 1 ? "s" : ""} for {name}
-      </h2>
-      <div className="cards-container">
-        {results.map((result) => (
-          <ResultGameCard key={result.id} game={result} />
-        ))}
+    <>
+      <div className="allpage">
+        <h2>
+          There {results.length > 1 ? "are" : "is"} {results.length} result
+          {results.length > 1 ? "s" : ""} for {name}
+        </h2>
+        <div className="cards-container">
+          {results.map((result) => (
+            <ResultGameCard key={result.id} game={result} />
+          ))}
+        </div>
       </div>
-    </main>
+    </>
   );
 }
