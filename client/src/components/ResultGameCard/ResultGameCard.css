@@ -1,0 +1,30 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.cards-container {
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+}
+
+.image_content {
+  object-fit: cover;
+  max-width: 190px;
+  max-height: 150px;
+}
+
+.card_image {
+  border: 1px solid hsl(0, 0%, 0%, 0.3);
+  max-width: 100%;
+  min-width: 100%;
+  height: 150px;
+  min-height: 150px;
+  object-fit: cover;
+}
