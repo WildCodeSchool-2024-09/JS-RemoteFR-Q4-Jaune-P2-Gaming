@@ -20,6 +20,7 @@ import Results from "./pages/Results/Results";
 import {
   getCalendriers,
   getDetailGames,
+  getGameByName,
   getGames,
   getNewGames,
 } from "./services/requests.ts";
@@ -53,8 +54,9 @@ const router = createBrowserRouter([
         loader: ({ params }) => getDetailGames(params.id),
       },
       {
-        path: "/Results",
+        path: "/Results/:name",
         element: <Results />,
+        loader: ({ params }) => getGameByName(params.name),
       },
       {
         path: "/Catalogue",
