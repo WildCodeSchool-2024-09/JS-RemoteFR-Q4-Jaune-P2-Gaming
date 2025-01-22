@@ -23,7 +23,7 @@ export default function Calendrier() {
   return (
     <>
       <div className="pagecalendrier">
-        <h1>Les jeux vidéo bientôt disponibles</h1>
+        <h2>upcoming releases</h2>
         {games.map((game) => (
           <CalendrierCard key={game.id} game={game} />
         ))}
