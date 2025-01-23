@@ -1,22 +1,23 @@
+import { Link } from "react-router-dom";
 import "./Metacritic.css";
 
-interface MetaCriticGameType {
+interface MetacriticTypes {
   game: {
-    name: string;
     id: number;
-    src: string;
     background_image: string;
+    name: string;
     rating: number;
-    ratings_count: number;
     rating_top: number;
   };
 }
 
-export function Metacritic({ game }: MetaCriticGameType) {
+export function Metacritic({ game }: MetacriticTypes) {
   return (
     <>
       <div className="meta">
-        <img src={game.background_image} alt={game.name} />
+        <Link className="pictures" to={`/GameDetails/${game.id}`}>
+          <img src={game.background_image} alt={game.name} />
+        </Link>
         <article>
           <p>
             <b>{game.name}</b>

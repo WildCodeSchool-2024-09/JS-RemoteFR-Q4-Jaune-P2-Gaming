@@ -15,7 +15,7 @@ header {
   padding: 1rem;
 }
 
-img {
+.logoHeader {
   height: 5rem;
 }
 input {
@@ -36,14 +36,11 @@ h1 {
   margin-right: 10rem;
 }
 
-@media screen and (max-width: 1200px) {
-  img {
+@media screen and (max-width: 980px) {
+  .logoHeader {
     margin-left: 5rem;
   }
-  input {
-    display: none;
-  }
-  button {
+  .search {
     display: none;
   }
 }

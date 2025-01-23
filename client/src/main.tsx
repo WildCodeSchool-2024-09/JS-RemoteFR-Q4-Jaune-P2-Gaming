@@ -17,7 +17,13 @@ import NewGames from "./pages/NewGames/NewGames";
 import Quizz from "./pages/Quizz/Quizz";
 import Results from "./pages/Results/Results";
 
-import { getCalendriers, getGames, getNewGames } from "./services/requests.ts";
+import {
+  getCalendriers,
+  getDetailGames,
+  getGameByName,
+  getGames,
+  getNewGames,
+} from "./services/requests.ts";
 
 /* ************************************************************************* */
 // Create router configuration with routes
@@ -43,20 +49,18 @@ const router = createBrowserRouter([
         }),
       },
       {
-        path: "/GameDetails",
+        path: "/GameDetails/:id",
         element: <GameDetails />,
+        loader: ({ params }) => getDetailGames(params.id),
       },
       {
-        path: "/Results",
+        path: "/Results/:name",
         element: <Results />,
+        loader: ({ params }) => getGameByName(params.name),
       },
       {
         path: "/Catalogue",
         element: <Catalogue />,
-      },
-      {
-        path: "/Calendrier",
-        element: <Calendrier />,
       },
       {
         path: "/calendrier",
