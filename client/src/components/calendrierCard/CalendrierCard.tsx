@@ -1,4 +1,5 @@
 import "./CalendrierCard.css";
+import { Link } from "react-router-dom";
 
 interface platform {
   platform: {
@@ -26,7 +27,9 @@ export default function CalendrierCard({ game }: gameType) {
   const genres = game.genres;
   return (
     <div className="calendrierCard">
-      <img src={game.background_image} alt="" />
+      <Link to={`/GameDetails/${game.id}`}>
+        <img src={game.background_image} alt="" />
+      </Link>
       <div className="calendrierCardDetail">
         <p className="gametitle">{game.name}</p>
         <p>Release Date: {game.released}</p>
