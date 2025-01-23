@@ -12,7 +12,7 @@ const getGames = () => {
 const getNewGames = () => {
   return axios
     .get(
-      `https://api.rawg.io/api/games?dates=2025-02-01,2025-10-10&ordering=-added&key=${import.meta.env.VITE_API_KEY}`,
+      `https://api.rawg.io/api/games?dates=2025-01-01,2025-01-29&ordering=-added&key=${import.meta.env.VITE_API_KEY}`,
     )
     .then((response) => response.data.results)
     .catch((error) => console.error(error));

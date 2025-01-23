@@ -7,21 +7,12 @@
   font-family: "Roboto", sans-serif;
 }
 
-.outlet {
-  display: flex;
-  background-color: rgb(16, 29, 43);
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
 body {
   background: -webkit-linear-gradient(180deg, #0b1825, #0d243b, #10355a); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(180deg, #0b1825, #0d243b, #10355a);
 }
 
-main {
-  width: 100%;
-}
-
 .centralPage {
   width: 100%;
+  display: flex;
 }
