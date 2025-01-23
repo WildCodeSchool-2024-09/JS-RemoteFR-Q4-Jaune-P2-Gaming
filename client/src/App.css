@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
-
 * {
   margin: 0;
   padding: 0;
@@ -7,25 +5,12 @@
   font-family: "Roboto", sans-serif;
 }
 
-/* .centralPage > nav {
-  background-color: red;
-} */
-.outlet {
-  display: flex;
-  background-color: rgb(16, 29, 43);
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
 body {
   background: -webkit-linear-gradient(180deg, #0b1825, #0d243b, #10355a); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(180deg, #0b1825, #0d243b, #10355a);
 }
 
-main {
+.centralPage {
   width: 100%;
-}
-
-.outlet {
   display: flex;
-  width: 100%;
 }

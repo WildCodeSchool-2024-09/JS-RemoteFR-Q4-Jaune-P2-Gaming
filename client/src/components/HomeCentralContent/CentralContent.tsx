@@ -14,7 +14,7 @@ export default function CentralContent({ game }: CentralContentType) {
   return (
     <>
       <div className="containerTop">
-        <h2 className="h2Top">Most Popular Game !</h2>
+        <h2 className="hTop">Most Popular Game !</h2>
         <a href="./GameDetails.tsx">
           <img src={game.background_image} alt="" className="centralImg" />
         </a>
@@ -36,7 +36,7 @@ export default function CentralContent({ game }: CentralContentType) {
       </div>
       <div className="containerBot">
         <div>
-          <h2 className="h2New">Les Nouveautées</h2>
+          <h2 className="hNew">Les Nouveautés</h2>
         </div>
       </div>
     </>
