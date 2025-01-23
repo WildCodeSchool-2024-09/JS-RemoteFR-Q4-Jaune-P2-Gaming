@@ -1,6 +1,7 @@
 import "./GameCards.css";
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 // Interfaces
 interface Platform {
@@ -82,11 +83,13 @@ export default function GameCards() {
       <div className="cards-container">
         {filteredGames.map((game) => (
           <div key={game.id} className="card">
-            <img
-              className="card-image"
-              src={game.background_image}
-              alt={game.name}
-            />
+            <Link to={`/GameDetails/${game.id}`}>
+              <img
+                className="card-image"
+                src={game.background_image}
+                alt={game.name}
+              />
+            </Link>
             <h2 className="card-title">{game.name}</h2>
             <p className="card-platform">
               {game.platforms.map((p) => p.platform.name).join(", ")}
