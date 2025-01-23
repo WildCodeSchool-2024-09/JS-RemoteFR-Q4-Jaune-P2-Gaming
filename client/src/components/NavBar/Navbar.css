@@ -3,26 +3,30 @@
 nav {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   width: 10vw;
   height: 100vh;
   /* justify-content: center; */
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: var(--nav-background-color);
 }
 
 .pages {
   display: flex;
   justify-content: center;
   padding-left: 1rem;
+  margin-top: 5rem;
 }
 
 .pages > ul > li {
   margin-bottom: 20px;
   list-style-type: none;
+  margin-bottom: 3rem;
 }
 
 .pages > ul > li > a {
   text-decoration: none;
-  color: rgb(255, 255, 255);
+  color: var(--font-color);
   opacity: 0.93;
   font-size: 1.1rem;
   font-family: "Roboto", sans-serif;
@@ -40,7 +44,7 @@ nav {
 }
 
 .pages > ul > li > a:hover {
-  color: #ffb699;
+  color: var(--ahover-color);
 }
 
 @media screen and (max-width: 990px) {

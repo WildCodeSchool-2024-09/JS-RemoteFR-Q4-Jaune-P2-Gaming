@@ -11,7 +11,7 @@
   border-radius: 50%;
   width: 5rem;
   height: 5rem;
-  box-shadow: 1px 3px 8px 1px #6e0c03;
+  box-shadow: 1px 3px 8px 1px var(--button-color);
 }
 
 .meta > article > p {
@@ -19,7 +19,7 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  color: #fff;
+  color: var(--font-color);
 }
 
 @media screen and (max-width: 980px) {

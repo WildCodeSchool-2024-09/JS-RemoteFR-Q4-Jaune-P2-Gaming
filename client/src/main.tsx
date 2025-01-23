@@ -1,6 +1,7 @@
 // Import necessary modules from React and React Router
 import { createRoot } from "react-dom/client";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import { XboxThemeProvider } from "./services/XboxThemeContext.tsx";
 /* ************************************************************************* */
 
 // Import the main app component
@@ -88,7 +89,11 @@ if (rootElement == null) {
 }
 
 // Render the app inside the root element
-createRoot(rootElement).render(<RouterProvider router={router} />);
+createRoot(rootElement).render(
+  <XboxThemeProvider>
+    <RouterProvider router={router} />
+  </XboxThemeProvider>,
+);
 
 /**
  * Helpful Notes:

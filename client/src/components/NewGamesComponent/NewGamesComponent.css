@@ -24,7 +24,7 @@
 .containerI {
   width: 15svw;
   height: 20svh;
-  background-color: rgba(52, 50, 50, 0.5);
+  background-color: var(--card-color);
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -35,19 +35,19 @@
 
 .platforms {
   font-size: 1rem;
-  color: white;
+  color: var(--font-color);
   margin-top: 0.5rem;
 }
 
 .Title {
   font-size: 1.2rem;
-  color: white;
+  color: var(--font-color);
   padding-left: 1rem;
 }
 
 .released {
   font-size: 1rem;
-  color: white;
+  color: var(--font-color);
   padding-left: 1rem;
   margin-bottom: 1rem;
 }
