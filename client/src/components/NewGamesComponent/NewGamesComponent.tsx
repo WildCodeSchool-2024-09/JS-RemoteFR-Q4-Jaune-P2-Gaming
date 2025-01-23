@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./NewGamesComponent.css";
 
 interface NewGamesComponentsType {
@@ -20,7 +21,9 @@ export default function NewGamesComponent({ newGame }: NewGamesComponentsType) {
 
   return (
     <div className="containerCard">
-      <img src={newGame.background_image} alt="" className="imgNews" />
+      <Link to={`/GameDetails/${newGame.id}`}>
+        <img src={newGame.background_image} alt="" className="imgNews" />
+      </Link>
       <div className="containerI">
         <p className="platforms">
           {newGamesPlatforms.length > 0
