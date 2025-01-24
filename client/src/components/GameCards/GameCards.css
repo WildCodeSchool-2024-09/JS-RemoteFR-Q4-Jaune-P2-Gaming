@@ -13,10 +13,10 @@
   padding: 1rem;
   margin: 0.5rem;
   text-align: center;
-  max-width: 12rem;
-  min-width: 12rem;
-  max-height: 20rem;
-  min-height: 20rem;
+  max-width: 16rem;
+  min-width: 16rem;
+  max-height: 14rem;
+  min-height: 14rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -25,15 +25,15 @@
 
 .card-image {
   border: 1px solid hsl(0, 0%, 0%, 0.3);
-  max-width: 100%;
-  min-width: 100%;
-  height: 200px;
-  min-height: 200px;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
   object-fit: cover;
+  overflow: hidden;
 }
 
 .card-title {
-  font-size: 1rem;
+  font-size: .75rem;
   margin: 10px 0;
   color: hsla(0, 0%, 95%, 0.9);
 }
@@ -69,22 +69,110 @@ button {
   touch-action: manipulation;
 }
 
-button:hover {
+/* ALL */
+.buttonAll:hover {
+  background-color: #f8f2d4;
+  color: #d32f2f;
+  border-color: #9b850a;
+}
+
+.buttonAll:active {
+  background-color: #faf6e2;
+  color: #b71c1c;
+  transform: scale(0.95);
+}
+
+/* PC */
+.buttonPC:hover {
+  background-color: #d4d4d4;
+  border-color: #737373;
+}
+
+.buttonPC:active {
+  background-color: #d4d4d4;
+  color: #b71c1c;
+  transform: scale(0.95);
+}
+
+/* PlayStation */
+.buttonPlayStation:hover {
+  background-color: #bcc7fc;
+  color: white;
+  border-color: #5271ff;
+}
+
+.buttonPlayStation:active {
+  background-color: #bcc7fc;
+  color: #b71c1c;
+  transform: scale(0.95);
+}
+
+/* Xbox */
+.buttonXbox:hover {
+  background-color: #c5ffe2;
+  color: white;
+  border-color: #00bf63;
+}
+
+.buttonXbox:active {
+  background-color: #c5ffe2;
+  color: #b71c1c;
+  transform: scale(0.95);
+}
+
+/* Switch */
+.buttonSwitch:hover {
+  background-color: #ffdada;
+  color: white;
+  border-color: #ff5757;
+}
+
+.buttonSwitch:active {
+  background-color: #ffdada;
+  color: #b71c1c;
+  transform: scale(0.95);
+}
+
+.button:hover {
   background-color: #ffe6e6;
   color: #d32f2f;
   border-color: #d32f2f;
 }
 
-button:active {
+.button:active {
   background-color: #f8d7da;
   color: #b71c1c;
   transform: scale(0.95);
 }
 
-button .text {
+button .textAll {
   font-size: 13px;
   font-weight: 500;
-  color: inherit;
+  color: #9b850a;
+}
+
+button .textPC {
+  font-size: 13px;
+  font-weight: 500;
+  color: #737373;
+}
+
+button .textPlayStation {
+  font-size: 13px;
+  font-weight: 500;
+  color: #5271ff;
+}
+
+button .textXbox {
+  font-size: 13px;
+  font-weight: 500;
+  color: #00bf63;
+}
+
+button .textSwitch {
+  font-size: 13px;
+  font-weight: 500;
+  color: #ff5757;
 }
 
 .loader {
@@ -138,4 +226,11 @@ button .text {
     opacity: 1;
     transform: scale(1);
   }
+}
+
+.catalogue {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
 }
