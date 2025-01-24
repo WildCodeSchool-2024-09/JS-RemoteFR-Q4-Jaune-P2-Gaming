@@ -33,6 +33,12 @@ input {
   margin: 1rem;
 }
 
+button[type="submit"] {
+  background-color: #2d4155;
+  color: rgba(255, 255, 255, 0.918);
+  border: none;
+}
+
 h1 {
   font-family: "Roboto", sans-serif;
   font-weight: 100;
