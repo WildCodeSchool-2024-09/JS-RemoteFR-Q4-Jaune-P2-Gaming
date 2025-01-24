@@ -9,10 +9,11 @@
   width: 100%;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
-.h2Top {
-  color: white;
+.hTop {
+  color: var(--font-color);
   font-weight: none;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   margin-bottom: 3rem;
@@ -27,32 +28,35 @@
   box-shadow: 0 0 20px 2px black;
 }
 
+a {
+  text-decoration: none;
+}
+
 .containerInfo {
   width: 45svw;
-  background-color: rgba(52, 50, 50, 0.5);
+  background-color: var(--card-color);
   display: flex;
   flex-direction: column;
-  justify-content: left;
   gap: 1rem;
   border-radius: 0 0 3% 3%;
   box-shadow: 0 0 20px 2px black;
 }
 
 .platforms {
-  color: white;
+  color: var(--font-color);
   font-size: 1.5vw;
   margin-left: 1vw;
   font-weight: bold;
 }
 
 .infoPlatforms {
-  color: white;
+  color: var(--font-color);
   margin-left: 1vw;
 }
 
 .centralName {
   font-size: 1.5vw;
-  color: white;
+  color: var(--font-color);
   margin-left: 1vw;
 }
 
@@ -70,11 +74,11 @@
 
 .pRate,
 .apiRate {
-  color: white;
+  color: var(--font-color);
   font-size: 1svw;
 }
 
-.h2New {
+.hTop {
   margin-top: 3rem;
-  color: white;
+  color: var(--font-color);
 }

@@ -1,7 +1,54 @@
-h1 {
-  color: black;
+.pagecalendrier {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.pagecalendrier > h2 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  color: white;
 }
 
-p {
-  color: black;
+.calendrierCard {
+  background-color: var(--card-color);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 1rem;
+  margin: 1rem;
+  line-height: 2rem;
+  width: 100%;
+}
+.calendrierCard img {
+  /* width: auto; */
+  height: 15rem;
+  max-width: 426px;
+}
+
+.gametitle {
+  font-size: 1.6rem;
+  font-weight: 500;
+  /*white-space: nowrap; affiche sur 1ligne */
+}
+
+.calendrierCardDetail {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 1rem;
+  min-width: 38rem;
+  color: var(--font-color);
+  font-size: 1.1rem;
+}
+
+@media screen and (max-width: 980px) {
+  .calendrierCard {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .calendrierCardDetail {
+    max-width: 100vw;
+  }
 }

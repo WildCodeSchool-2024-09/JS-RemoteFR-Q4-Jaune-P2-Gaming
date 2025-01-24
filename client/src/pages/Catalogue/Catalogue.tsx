@@ -4,7 +4,7 @@ import GameCards from "../../components/GameCards/GameCards";
 export default function Catalogue() {
   return (
     <main>
-      <h2 className="pagetitle">Catalogue</h2>
+      <h2 className="catalogue">Catalogue</h2>
       <div className="cards-container">
         <GameCards />
       </div>

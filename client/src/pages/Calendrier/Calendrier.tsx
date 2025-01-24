@@ -13,6 +13,7 @@ interface gameType {
   background_image: string;
   released: string;
   platforms: platform[];
+  genres: [];
 }
 
 export default function Calendrier() {
@@ -21,10 +22,12 @@ export default function Calendrier() {
 
   return (
     <>
-      <h1>Les jeux vidéo bientôt disponibles</h1>
-      {games.map((game) => (
-        <CalendrierCard key={game.id} game={game} />
-      ))}
+      <div className="pagecalendrier">
+        <h2>upcoming releases</h2>
+        {games.map((game) => (
+          <CalendrierCard key={game.id} game={game} />
+        ))}
+      </div>
     </>
   );
 }

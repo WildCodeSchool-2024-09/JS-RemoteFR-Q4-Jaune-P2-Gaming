@@ -2,54 +2,57 @@
 
 nav {
   display: flex;
-  background: -webkit-linear-gradient(180deg, #0b1825, #0d243b, #10355a); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(180deg, #0b1825, #0d243b, #10355a);
+  flex-direction: column;
+  justify-content: space-between;
   width: 10vw;
-  height: 100%;
-  justify-content: center;
+  height: 100vh;
+  /* justify-content: center; */
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: var(--nav-background-color);
+}
+
+.pages {
+  display: flex;
+  justify-content: center;
+  padding-left: 1rem;
+  margin-top: 5rem;
+}
+
+.pages > ul > li {
+  margin-bottom: 20px;
+  list-style-type: none;
+  margin-bottom: 3rem;
+}
+
+.pages > ul > li > a {
+  text-decoration: none;
+  color: var(--font-color);
+  opacity: 0.93;
+  font-size: 1.1rem;
+  font-family: "Roboto", sans-serif;
+}
+
+.logos_reseaux > img {
+  width: 4rem;
 }
 
 .logos_reseaux {
   display: flex;
   flex-direction: column;
-  width: 5rem;
-  margin-top: 45rem;
-}
-
-.logo_resaux > img {
-  width: 2rem;
-}
-
-.pages {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 10rem;
-}
-
-.pages > ul {
-  display: flex;
-  flex-direction: column;
-  gap: 5rem;
-}
-
-.pages > ul > li {
-  list-style-type: none;
+  align-items: flex-start;
+  margin-top: 5rem;
 }
 
 .pages > ul > li > a:hover {
-  text-decoration: underline;
-}
-
-.pages > ul > li > a {
-  text-decoration: none;
-  color: rgb(255, 255, 255);
+  color: var(--ahover-color);
 }
 
 @media screen and (max-width: 990px) {
   nav {
+    display: none;
+  }
+
+  .listejeuxmeta {
     display: none;
   }
 }

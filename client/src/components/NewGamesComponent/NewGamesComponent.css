@@ -5,7 +5,49 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-div {
+.containerCard {
+  width: 15svw;
+  margin-top: 5rem;
   display: flex;
+  flex-direction: column;
   align-items: center;
+}
+
+.imgNews {
+  width: 15svw;
+  height: 20svh;
+  object-fit: cover;
+  border-radius: 3% 3% 0 0;
+  box-shadow: 0 0 20px 2px black;
+}
+
+.containerI {
+  width: 15svw;
+  height: 20svh;
+  background-color: var(--card-color);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border-radius: 0 0 3% 3%;
+  box-shadow: 0 0 20px 2px black;
+  margin-bottom: 3rem;
+}
+
+.platforms {
+  font-size: 1rem;
+  color: var(--font-color);
+  margin-top: 0.5rem;
+}
+
+.Title {
+  font-size: 1.2rem;
+  color: var(--font-color);
+  padding-left: 1rem;
+}
+
+.released {
+  font-size: 1rem;
+  color: var(--font-color);
+  padding-left: 1rem;
+  margin-bottom: 1rem;
 }

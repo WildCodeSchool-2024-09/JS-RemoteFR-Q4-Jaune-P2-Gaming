@@ -1,6 +1,7 @@
 // Import necessary modules from React and React Router
 import { createRoot } from "react-dom/client";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import { XboxThemeProvider } from "./services/XboxThemeContext.tsx";
 /* ************************************************************************* */
 
 // Import the main app component
@@ -17,7 +18,13 @@ import NewGames from "./pages/NewGames/NewGames";
 import Quizz from "./pages/Quizz/Quizz";
 import Results from "./pages/Results/Results";
 
-import { getCalendriers, getGames, getNewGames } from "./services/requests.ts";
+import {
+  getCalendriers,
+  getDetailGames,
+  getGameByName,
+  getGames,
+  getNewGames,
+} from "./services/requests.ts";
 
 /* ************************************************************************* */
 // Create router configuration with routes
@@ -43,20 +50,18 @@ const router = createBrowserRouter([
         }),
       },
       {
-        path: "/GameDetails",
+        path: "/GameDetails/:id",
         element: <GameDetails />,
+        loader: ({ params }) => getDetailGames(params.id),
       },
       {
-        path: "/Results",
+        path: "/Results/:name",
         element: <Results />,
+        loader: ({ params }) => getGameByName(params.name),
       },
       {
         path: "/Catalogue",
         element: <Catalogue />,
-      },
-      {
-        path: "/Calendrier",
-        element: <Calendrier />,
       },
       {
         path: "/calendrier",
@@ -84,7 +89,11 @@ if (rootElement == null) {
 }
 
 // Render the app inside the root element
-createRoot(rootElement).render(<RouterProvider router={router} />);
+createRoot(rootElement).render(
+  <XboxThemeProvider>
+    <RouterProvider router={router} />
+  </XboxThemeProvider>,
+);
 
 /**
  * Helpful Notes:
