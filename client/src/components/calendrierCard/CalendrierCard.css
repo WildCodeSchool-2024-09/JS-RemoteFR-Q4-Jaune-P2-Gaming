@@ -10,7 +10,7 @@
 }
 
 .calendrierCard {
-  background-color: hwb(212 19% 68% / 0.671);
+  background-color: var(--card-color);
   display: flex;
   flex-direction: row;
   align-items: flex-start;
@@ -37,7 +37,7 @@
   align-items: flex-start;
   padding-left: 1rem;
   min-width: 38rem;
-  color: white;
+  color: var(--font-color);
   font-size: 1.1rem;
 }
 

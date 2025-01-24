@@ -14,3 +14,34 @@ body {
   width: 100%;
   display: flex;
 }
+
+.dark {
+  --root-background-color: rgb(0, 0, 0);
+  --font-color: rgb(2, 255, 15);
+  --card-color: rgb(4, 31, 5);
+  --button-color: rgb(2, 255, 15);
+  --border-color: 1px solid black;
+  --input-color: rgb(2, 185, 11);
+  --ahover-color: #fff;
+  --box-shadow-color: rgb(2, 255, 15);
+}
+
+.light {
+  --root-background-color: -webkit-linear-gradient(
+    180deg,
+    #0b1825,
+    #0d243b,
+    #10355a
+  );
+  --font-color: #fff;
+  --card-color: hsl(0, 0%, 0%, 0.4);
+  --button-color: #fff;
+  --border-color: 1px solid #e0e0e0;
+  --input-color: #1b2589;
+  --ahover-color: #ffb699;
+  --box-shadow-color: #e0845f;
+}
+
+#root {
+  background-color: var(--root-background-color);
+}

@@ -1,6 +1,7 @@
 import "./Header.css";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import SwitchButton from "../SwitchButton/SwitchButton";
 import Checkbox from "./Checkbox";
 
 export default function Header() {
@@ -21,11 +22,14 @@ export default function Header() {
 
   return (
     <header>
-      <Checkbox />
+      <div className="logo_title">
+        <Checkbox />
 
-      <img className="logoHeader" src="/public/images/logo.webp" alt="logo" />
+        <img className="logoHeader" src="/public/images/logo.webp" alt="logo" />
 
-      <h1>Wild Games</h1>
+        <h1>Wild Games</h1>
+      </div>
+
       <div className="search">
         <form onSubmit={sendSearchForm}>
           <input
@@ -38,6 +42,13 @@ export default function Header() {
           <button type="submit">Search</button>
         </form>
       </div>
+      <div className="switch">
+        <SwitchButton />
+      </div>
+
+      {/* <button type="button" onClick={switchMode}>
+        Light/dark
+      </button> */}
     </header>
   );
 }
