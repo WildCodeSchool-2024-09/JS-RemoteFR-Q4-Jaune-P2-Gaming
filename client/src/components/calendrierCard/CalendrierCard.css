@@ -6,6 +6,7 @@
 .pagecalendrier > h2 {
   font-family: "Roboto", sans-serif;
   font-weight: 100;
+  color: white;
 }
 
 .calendrierCard {
@@ -18,7 +19,7 @@
   line-height: 2rem;
   width: 100%;
 }
-.calendrierCard > img {
+.calendrierCard img {
   /* width: auto; */
   height: 15rem;
   max-width: 426px;
