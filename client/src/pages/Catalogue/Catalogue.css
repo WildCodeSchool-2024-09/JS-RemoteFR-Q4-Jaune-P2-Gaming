@@ -1,20 +1,21 @@
-.cards-container {
+.catalogue-cards-container {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.main {
+.catalogue-main {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+  width: 100%;
 }
 
-.catalogue {
+.catalogueh2 {
   text-align: center;
   justify-content: center;
   align-items: center;
-  margin: 2rem 0;
+  margin: 2rem;
   font-size: 2rem;
   color: var(--font-color);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
