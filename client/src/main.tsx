@@ -15,7 +15,6 @@ import Catalogue from "./pages/Catalogue/Catalogue";
 import GameDetails from "./pages/GameDetails/GameDetails";
 import HomePage from "./pages/HomePage/HomePage";
 import NewGames from "./pages/NewGames/NewGames";
-import Quizz from "./pages/Quizz/Quizz";
 import Results from "./pages/Results/Results";
 
 import {
@@ -67,10 +66,6 @@ const router = createBrowserRouter([
         path: "/calendrier",
         element: <Calendrier />,
         loader: getCalendriers,
-      },
-      {
-        path: "/Quizz",
-        element: <Quizz />,
       },
     ],
   },

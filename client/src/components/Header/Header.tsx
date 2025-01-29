@@ -1,6 +1,7 @@
 import "./Header.css";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import SwitchButton from "../SwitchButton/SwitchButton";
 import Checkbox from "./Checkbox";
 
@@ -27,7 +28,9 @@ export default function Header() {
 
         <img className="logoHeader" src="/public/images/logo.webp" alt="logo" />
 
-        <h1>Wild Games</h1>
+        <h1>
+          <Link to="/">Wild Games</Link>
+        </h1>
       </div>
 
       <div className="search">

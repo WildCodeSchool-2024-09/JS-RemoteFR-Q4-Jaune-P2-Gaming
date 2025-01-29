@@ -25,12 +25,13 @@ header {
   height: 5rem;
 }
 input {
-  background-color: var(--input-color);
+  background-color: #2d4155;
   color: white;
   border: none;
-  padding: 0.5rem 5rem;
-  border-radius: 30px;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
   margin: 1rem;
+  width: 15rem;
 }
 
 button[type="submit"] {
@@ -43,9 +44,12 @@ h1 {
   font-family: "Roboto", sans-serif;
   font-weight: 100;
   font-style: normal;
-  color: var(--font-color);
-  opacity: 0.93;
   margin-right: 10rem;
+}
+
+h1 a {
+  color: white;
+  opacity: 0.93;
 }
 
 .search {
@@ -59,7 +63,6 @@ h1 {
 
 .switch {
   margin-top: 1.7rem;
-
   margin-right: 2rem;
 }
 
