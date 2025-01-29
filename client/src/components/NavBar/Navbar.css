@@ -5,7 +5,7 @@ nav {
   flex-direction: column;
   justify-content: space-between;
   width: 10vw;
-  height: 100vh;
+
   /* justify-content: center; */
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   background-color: var(--nav-background-color);
@@ -13,18 +13,20 @@ nav {
 
 .pages {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  padding-left: 1rem;
+  padding-left: 0.5rem;
   margin-top: 5rem;
+  width: 100%;
 }
 
-.pages > ul > li {
+.pages > li {
   margin-bottom: 20px;
   list-style-type: none;
   margin-bottom: 3rem;
 }
 
-.pages > ul > li > a {
+.pages > li > a {
   text-decoration: none;
   color: var(--font-color);
   opacity: 0.93;
