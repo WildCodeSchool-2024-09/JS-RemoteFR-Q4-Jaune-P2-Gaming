@@ -49,17 +49,26 @@ export default function DetailsGamesContent({ game }: DetailsTypes) {
           <p className="gameName">
             <b>{game.name}</b>
           </p>
-
           <p className="releaseDate"> Sortie le : {game.released}</p>
           <p className="platform">{game.platform}</p>
-          <p className="description">{game.description_raw}</p>
+          {game.description_raw === "" ? (
+            <p>No description</p>
+          ) : (
+            <p className="description">{game.description_raw}</p>
+          )}
         </article>
-        <article className="esb_rating">
-          <h2>
-            <b>Catégorie</b>
-          </h2>
-          <p className="ratinGame">{game.esrb_rating.name}</p>
-        </article>
+
+        {game.esrb_rating === null ? (
+          ""
+        ) : (
+          <article className="esb_rating">
+            <h2>
+              <b>Catégorie</b>
+            </h2>
+            <p className="ratinGame">{game.esrb_rating.name}</p>
+          </article>
+        )}
+
         <article className="ratings">
           <div className="titre">
             <h2>Rates</h2>
