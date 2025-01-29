@@ -25,15 +25,17 @@ export default function NewGamesComponent({ newGame }: NewGamesComponentsType) {
         <img src={newGame.background_image} alt="" className="imgNews" />
       </Link>
       <div className="containerI">
-        <p className="platforms">
-          {newGamesPlatforms.length > 0
-            ? newGamesPlatforms
-                .map((platform) => platform.platform.name)
-                .join(", ")
-            : ""}
-        </p>
-        <h2 className="Title">{newGame.name}</h2>
-        <p className="released">{newGame.released}</p>
+        <Link className="pictures" to={`/GameDetails/${newGame.id}`}>
+          <p className="platforms">
+            {newGamesPlatforms.length > 0
+              ? newGamesPlatforms
+                  .map((platform) => platform.platform.name)
+                  .join(", ")
+              : ""}
+          </p>
+          <h2 className="Title">{newGame.name}</h2>
+          <p className="released">{newGame.released}</p>
+        </Link>
       </div>
     </div>
   );

@@ -1,4 +1,5 @@
 import "./CentralContent.css";
+import { Link } from "react-router-dom";
 
 interface CentralContentType {
   game: {
@@ -7,6 +8,7 @@ interface CentralContentType {
     background_image: string;
     rating: number;
     ratings_count: number;
+    id: number;
   };
 }
 
@@ -15,9 +17,9 @@ export default function CentralContent({ game }: CentralContentType) {
     <>
       <div className="containerTop">
         <h2 className="hTop">Most Popular Game !</h2>
-        <a href="./GameDetails.tsx">
+        <Link to={`/GameDetails/${game.id}`}>
           <img src={game.background_image} alt="" className="centralImg" />
-        </a>
+        </Link>
         <div className="containerInfo">
           <a href="./GameDetails.tsx">
             <p className="platforms">Platforms</p>
@@ -32,11 +34,6 @@ export default function CentralContent({ game }: CentralContentType) {
               </p>
             </a>
           </div>
-        </div>
-      </div>
-      <div className="containerBot">
-        <div>
-          <h2 className="hNew">Les Nouveautés</h2>
         </div>
       </div>
     </>
