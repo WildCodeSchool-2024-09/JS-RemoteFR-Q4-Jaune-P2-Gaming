@@ -37,7 +37,7 @@ interface DetailsTypes {
 export default function DetailsGamesContent({ game }: DetailsTypes) {
   return (
     <>
-      <div className="allDetail">
+      <div className="allDetail_games">
         <div className="image">
           <img
             src={game.background_image}
