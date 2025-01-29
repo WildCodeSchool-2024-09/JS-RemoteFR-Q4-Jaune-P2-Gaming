@@ -25,46 +25,103 @@ export default function NewGamesComponent({ newGame }: NewGamesComponentsType) {
         <img src={newGame.background_image} alt="" className="imgNews" />
       </Link>
       <div className="containerI">
-        <Link className="pictures" to={`/GameDetails/${newGame.id}`}>
-          <p className="platforms">
-            {newGamesPlatforms.length > 0
-              ? newGamesPlatforms
-                  .map((platform) => platform.platform.name)
-                  .join(", ")
-              : ""}
-          </p>
-          <h2 className="Title">{newGame.name}</h2>
-          <p className="released">{newGame.released}</p>
-        </Link>
+        <h2 className="Title">{newGame.name}</h2>
+        <p className="released">{newGame.released}</p>
+        <p className="newGamesPlatforms">
+          {newGamesPlatforms.map((platform) => (
+            <span key={platform.platform.id}>
+              {platform.platform.name === "PC" ? (
+                <img
+                  src="../public/images/PC.png"
+                  alt="PC"
+                  style={{
+                    width: "45px",
+                    height: "auto",
+                    margin: "2px",
+                  }}
+                />
+              ) : (
+                " "
+              )}
+
+              {platform.platform.name === "PlayStation 5" ? (
+                <img
+                  src="../public/images/PS5.png"
+                  alt="PS5"
+                  style={{
+                    width: "45px",
+                    height: "auto",
+                    margin: "2px",
+                  }}
+                />
+              ) : (
+                " "
+              )}
+
+              {platform.platform.name === "Xbox Series S/X" ? (
+                <img
+                  src="../public/images/Xbox X.png"
+                  alt="Xbox X"
+                  style={{
+                    width: "45px",
+                    height: "auto",
+                    margin: "2px",
+                  }}
+                />
+              ) : (
+                " "
+              )}
+
+              {platform.platform.name === "PlayStation 4" ? (
+                <img
+                  src="../public/images/PS4.png"
+                  alt="PS4"
+                  style={{
+                    width: "45px",
+                    height: "auto",
+                    margin: "2px",
+                  }}
+                />
+              ) : (
+                " "
+              )}
+
+              {platform.platform.name === "Xbox One" ? (
+                <img
+                  src="../public/images/Xbox One.png"
+                  alt="Xbox One"
+                  style={{
+                    width: "45px",
+                    height: "auto",
+                    margin: "2px",
+                  }}
+                />
+              ) : (
+                " "
+              )}
+
+              {platform.platform.name === "Nintendo Switch" ? (
+                <img
+                  src="../public/images/Switch.png"
+                  alt="Nintendo Switch"
+                  style={{
+                    width: "45px",
+                    height: "auto",
+                    margin: "2px",
+                  }}
+                />
+              ) : (
+                " "
+              )}
+            </span>
+          ))}
+        </p>
+        <div className="newGamesText">
+          <button type="button" className="newGamesBuy">
+            Buy now
+          </button>
+        </div>
       </div>
     </div>
   );
 }
-
-/* <div className="containerTop">
-<h2 className="h2Top">Most Popular Game !</h2>
-<a href="./GameDetails.tsx">
-  <img src={game.background_image} alt="" className="centralImg" />
-</a>
-<div className="containerInfo">
-  <a href="./GameDetails.tsx">
-    <p className="platforms">Platforms</p>
-    <p className="infoPlatforms">PC PS XBOX</p>
-    <h2 className="centralName">{game.name}</h2>
-  </a>
-  <div className="containerRate">
-    <a href="./GameDetails.tsx">
-      <p className="pRate">Rate</p>
-      <p className="apiRate">
-        {game.rating}/5 on {game.ratings_count}
-      </p>
-    </a>
-  </div>
-</div>
-</div>
-<div className="containerBot">
-<div>
-  <h2 className="h2New">Les Nouveautées</h2>
-</div>
-</div>
-</> */

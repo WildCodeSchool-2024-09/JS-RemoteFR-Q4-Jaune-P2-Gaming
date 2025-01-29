@@ -31,7 +31,9 @@ export default function CalendrierCard({ game }: gameType) {
         <img src={game.background_image} alt="" />
       </Link>
       <div className="calendrierCardDetail">
-        <p className="gametitle">{game.name}</p>
+        <p className="gametitle">
+          <b>{game.name}</b>
+        </p>
         <p>Release Date: {game.released}</p>
         {/* verifie si game.platforms est toujours un tableau (même vide)  */}
         <p>{platforms?.map((p) => p.platform.name).join(" - ") || []}</p>

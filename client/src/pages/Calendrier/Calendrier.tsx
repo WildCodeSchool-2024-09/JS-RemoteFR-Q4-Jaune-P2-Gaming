@@ -1,5 +1,6 @@
 import { useLoaderData } from "react-router-dom";
 import CalendrierCard from "../../components/calendrierCard/CalendrierCard";
+import "./Calendier.css";
 
 interface platform {
   platform: {

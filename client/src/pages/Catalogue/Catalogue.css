@@ -20,3 +20,9 @@
   color: var(--font-color);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
+@media screen and (max-width: 980px) {
+  .catalogue-main {
+    display: flex;
+  }
+}
