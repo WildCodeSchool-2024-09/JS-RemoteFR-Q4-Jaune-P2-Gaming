@@ -45,7 +45,9 @@ h1 {
   font-style: normal;
   color: var(--font-color);
   opacity: 0.93;
-  margin-right: 10rem;
+}
+.loupe {
+  display: none;
 }
 
 .search {
@@ -58,12 +60,51 @@ h1 {
 }
 
 .switch {
+  display: flex;
+  align-items: center;
   margin-top: 1.7rem;
 
   margin-right: 2rem;
 }
 
 @media screen and (max-width: 980px) {
+  header {
+    display: flex;
+    position: fixed;
+    align-items: center;
+    align-content: flex-start;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    background-color: #0b1825;
+    height: 5rem;
+  }
+  .logo_title {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .logoHeader {
+    gap: -2rem;
+  }
+
+  .h1 {
+    display: flex;
+  }
+
+  .menuburger {
+    display: block;
+    margin-bottom: 3rem;
+  }
+
+  .loupe {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-left: 1rem;
+  }
+
   .logoHeader {
     margin-left: 5rem;
   }

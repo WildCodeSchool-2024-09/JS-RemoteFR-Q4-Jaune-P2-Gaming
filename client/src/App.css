@@ -45,3 +45,11 @@ body {
 #root {
   background-color: var(--root-background-color);
 }
+
+@media screen and (max-width: 980px) {
+  body {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    padding-top: 5rem;
+  }
+}

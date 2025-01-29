@@ -37,15 +37,16 @@
   stroke-dasharray: 20 300;
   stroke-dashoffset: -32.42;
 }
+
 .menu {
   display: flex;
   flex-direction: column;
   position: fixed;
-  margin-top: 0.9rem;
+  margin-top: 0.8rem;
   margin-left: -1rem;
   border-radius: 0 0 20px 0;
-  background-color: var(--root-backgroud-color);
-  transition: 1s ease;
+  background-color: #0b1825;
+  transition: 2s ease;
 }
 
 .menu > ul > li {
