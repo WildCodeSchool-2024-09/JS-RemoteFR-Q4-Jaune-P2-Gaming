@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import SwitchButton from "../SwitchButton/SwitchButton";
 import Checkbox from "./Checkbox";
+import Loupe from "./Loupe";
 
 export default function Header() {
   const [formSearch, setFormSearch] = useState("");
@@ -24,13 +25,18 @@ export default function Header() {
   return (
     <header>
       <div className="logo_title">
-        <Checkbox />
-
+        <div className="menuburger">
+          <Checkbox />
+        </div>
         <img className="logoHeader" src="/public/images/logo.webp" alt="logo" />
 
         <h1>
           <Link to="/">Wild Games</Link>
         </h1>
+
+        <div className="loupe">
+          <Loupe />
+        </div>
       </div>
 
       <div className="search">
@@ -48,10 +54,6 @@ export default function Header() {
       <div className="switch">
         <SwitchButton />
       </div>
-
-      {/* <button type="button" onClick={switchMode}>
-        Light/dark
-      </button> */}
     </header>
   );
 }

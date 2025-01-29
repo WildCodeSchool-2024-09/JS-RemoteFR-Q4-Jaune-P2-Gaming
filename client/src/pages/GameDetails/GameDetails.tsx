@@ -2,6 +2,10 @@ import "./GameDetails.css";
 import { useLoaderData } from "react-router-dom";
 import DetailsGameContent from "../../components/DetailsGameContent/DetailsGameContent";
 
+interface NewGamesDetailTypes {
+  newGames: DetailsTypes[];
+}
+
 interface DetailsTypes {
   id: number;
   background_image: string;
@@ -35,11 +39,17 @@ interface DetailsTypes {
 }
 
 export default function GameDetails() {
-  const details = useLoaderData() as DetailsTypes;
-  console.info(details);
+  const { gameDetails, newGames } = useLoaderData() as {
+    gameDetails: DetailsTypes;
+    newGames: NewGamesDetailTypes[];
+  };
+  console.info(gameDetails);
+  if (!gameDetails || !newGames) {
+    return <div>Loading...</div>;
+  }
   return (
     <div className="pagedetail">
-      <DetailsGameContent game={details} />
+      <DetailsGameContent game={gameDetails} />
     </div>
   );
 }

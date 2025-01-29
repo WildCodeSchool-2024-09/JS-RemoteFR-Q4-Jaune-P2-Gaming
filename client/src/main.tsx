@@ -51,7 +51,14 @@ const router = createBrowserRouter([
       {
         path: "/GameDetails/:id",
         element: <GameDetails />,
-        loader: ({ params }) => getDetailGames(params.id),
+        loader: async ({ params }) => {
+          const gameDetails = await getDetailGames(params.id);
+          const newGames = await getNewGames();
+          return {
+            gameDetails,
+            newGames,
+          };
+        },
       },
       {
         path: "/Results/:name",

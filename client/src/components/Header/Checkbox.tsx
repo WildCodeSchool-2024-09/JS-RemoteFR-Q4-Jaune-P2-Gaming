@@ -35,7 +35,7 @@ const Checkbox = () => {
           <path d="M7 16 27 16" className="line" />
         </svg>
         {isOpen && (
-          <div className={`menu ${isOpen ? "open" : ""}`}>
+          <div className={`menu ${isOpen ? "_open" : ""}`}>
             <ul>
               <li>
                 <Link to="/">Home</Link>
