@@ -30,7 +30,7 @@ export default function Header() {
         </div>
         <img className="logoHeader" src="/public/images/logo.webp" alt="logo" />
 
-        <h1>
+        <h1 className="titre-header">
           <Link to="/">Wild Games</Link>
         </h1>
 

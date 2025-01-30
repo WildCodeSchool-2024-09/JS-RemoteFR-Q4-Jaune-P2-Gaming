@@ -34,10 +34,14 @@ export default function CalendrierCard({ game }: gameType) {
         <p className="gametitle">
           <b>{game.name}</b>
         </p>
-        <p>Release Date: {game.released}</p>
+        <p>
+          <b>Release Date:</b> {game.released}
+        </p>
         {/* verifie si game.platforms est toujours un tableau (même vide)  */}
         <p>{platforms?.map((p) => p.platform.name).join(" - ") || []}</p>
-        <p>Tags: {genres?.map((g) => g.name).join(" - ") || []}</p>
+        <p>
+          <b>Tags:</b> {genres?.map((g) => g.name).join(" - ") || []}
+        </p>
       </div>
     </div>
   );

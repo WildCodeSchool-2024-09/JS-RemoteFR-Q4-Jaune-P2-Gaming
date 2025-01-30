@@ -16,6 +16,10 @@ header {
   justify-content: space-between;
 }
 
+.titre-header > a {
+  color: var(--font-color);
+}
+
 .logo_title {
   display: flex;
   align-items: center;

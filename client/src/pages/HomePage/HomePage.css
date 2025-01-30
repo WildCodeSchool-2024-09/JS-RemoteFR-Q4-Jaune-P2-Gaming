@@ -21,8 +21,9 @@
   display: flex;
   flex-direction: column;
   width: 10%;
+  padding-top: 4rem;
   overflow-y: auto;
-  max-height: 35rem;
+  height: 60rem;
 }
 
 .listejeuxmeta::-webkit-scrollbar {
