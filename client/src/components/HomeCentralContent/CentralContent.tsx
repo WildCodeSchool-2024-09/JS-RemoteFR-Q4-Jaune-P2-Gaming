@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./CentralContent.css";
 import { Link } from "react-router-dom";
 
@@ -13,6 +14,11 @@ interface CentralContentType {
 }
 
 export default function CentralContent({ game }: CentralContentType) {
+  const [displayGoty, setDisplayGoty] = useState(false);
+  const toggleImageVisibility = () => {
+    setDisplayGoty((prevState) => !prevState);
+  };
+
   return (
     <>
       <div className="containerTop">
@@ -35,6 +41,24 @@ export default function CentralContent({ game }: CentralContentType) {
             </a>
           </div>
         </div>
+      </div>
+      <div>
+        <section className="blocEasterEgg">
+          <h2 className="hTop">Le Greatest Of The Year</h2>
+          <button
+            type="button"
+            className="buttonGoty"
+            onClick={toggleImageVisibility}
+          >
+            <img
+              src="../public/images/Code_Of_War.png"
+              alt=""
+              className="imgGoty"
+              style={{ display: displayGoty ? "block" : "none" }}
+            />
+            Code Of War !
+          </button>
+        </section>
       </div>
     </>
   );
