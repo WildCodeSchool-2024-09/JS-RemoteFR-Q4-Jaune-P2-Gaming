@@ -27,7 +27,7 @@ export default function HomePage() {
   const sortedData = filteredGames.sort((a, b) => b.rating - a.rating);
 
   return (
-    <main className="homemenu">
+    <div className="homemenu">
       <div className="containerTop">
         <CentralContent game={games[0]} />
       </div>
@@ -36,6 +36,6 @@ export default function HomePage() {
           <Metacritic key={game.id} game={game} />
         ))}
       </div>
-    </main>
+    </div>
   );
 }
