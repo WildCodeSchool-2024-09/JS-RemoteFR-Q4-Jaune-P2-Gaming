@@ -21,7 +21,7 @@ export default function CentralContent({ game }: CentralContentType) {
 
   return (
     <>
-      <div className="containerTop">
+      <div className="all_container">
         <h2 className="hTop">Most Popular Game !</h2>
         <Link to={`/GameDetails/${game.id}`}>
           <img src={game.background_image} alt="" className="centralImg" />
